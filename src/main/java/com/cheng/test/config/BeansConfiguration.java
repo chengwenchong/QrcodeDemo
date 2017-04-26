@@ -111,14 +111,14 @@ public class BeansConfiguration {
 		return okHttpClient;
 	}
 
-	/**
+/*	*//**
 	 * 添加自定义http客户端(默认超时10秒,文件上传下载需自定义超时时间)
-	 */
+	 *//*
 	private <T> T service(String restUrl, Class<T> clazz) {
 		return new RestAdapter.Builder().setConverter(new JacksonConverter()).setClient(okClient()).setEndpoint(restUrl).build().create(clazz);
 	}
 
 	private <T> T commonService(String restUrl, Class<T> clazz) {
 		return new RestAdapter.Builder().setConverter(new JacksonConverter()).setEndpoint(restUrl).build().create(clazz);
-	}
+	}*/
 }
