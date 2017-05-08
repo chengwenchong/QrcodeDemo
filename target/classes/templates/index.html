@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport"/>
+    <title>test</title>
+</head>
+
+<body>
+	<table width="400" border="1" cellspacing="0" cellpadding="0">
+		<tr th:each="user:${users}">
+			<td th:text="${user.id}"></td>
+			<td th:text="${user.loginName}"></td>
+			<td th:text="${user.password}"></td>
+		</tr>
+	</table>
+</body>
+</html>
