@@ -4,6 +4,7 @@ Implementation-Version: 0.0.1-SNAPSHOT
 Built-By: admin
 Implementation-Vendor-Id: qrcode-demo
 Build-Jdk: 1.8.0_91
+Implementation-URL: http://projects.spring.io/spring-boot/qrcode-demo/
 Created-By: Maven Integration for Eclipse
 Implementation-Vendor: Pivotal Software, Inc.
 

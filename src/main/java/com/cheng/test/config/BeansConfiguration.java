@@ -6,7 +6,7 @@ import java.util.concurrent.TimeUnit;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.thymeleaf.ThymeleafProperties;
 import org.springframework.boot.context.embedded.EmbeddedServletContainerCustomizer;
-import org.springframework.boot.context.embedded.ErrorPage;
+import org.springframework.boot.web.servlet.ErrorPage;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.Ordered;
@@ -21,9 +21,7 @@ import org.thymeleaf.templateresolver.TemplateResolver;
 import com.squareup.okhttp.OkHttpClient;
 
 import nz.net.ultraq.thymeleaf.LayoutDialect;
-import retrofit.RestAdapter;
 import retrofit.client.OkClient;
-import retrofit.converter.JacksonConverter;
 
 @Configuration
 public class BeansConfiguration {
