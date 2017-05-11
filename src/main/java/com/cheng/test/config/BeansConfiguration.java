@@ -18,10 +18,13 @@ import org.thymeleaf.spring4.resourceresolver.SpringResourceResourceResolver;
 import org.thymeleaf.spring4.view.ThymeleafViewResolver;
 import org.thymeleaf.templateresolver.TemplateResolver;
 
+import com.cheng.test.service.TestService;
 import com.squareup.okhttp.OkHttpClient;
 
 import nz.net.ultraq.thymeleaf.LayoutDialect;
+import retrofit.RestAdapter;
 import retrofit.client.OkClient;
+import retrofit.converter.JacksonConverter;
 
 @Configuration
 public class BeansConfiguration {
@@ -109,14 +112,19 @@ public class BeansConfiguration {
 		return okHttpClient;
 	}
 
-/*	*//**
+	/**
 	 * 添加自定义http客户端(默认超时10秒,文件上传下载需自定义超时时间)
-	 *//*
+	 */
 	private <T> T service(String restUrl, Class<T> clazz) {
 		return new RestAdapter.Builder().setConverter(new JacksonConverter()).setClient(okClient()).setEndpoint(restUrl).build().create(clazz);
 	}
 
 	private <T> T commonService(String restUrl, Class<T> clazz) {
 		return new RestAdapter.Builder().setConverter(new JacksonConverter()).setEndpoint(restUrl).build().create(clazz);
-	}*/
+	}
+	
+	@Bean
+	public TestService testService(){
+		return service(commonConfig.getBaseUrl(), TestService.class);
+	}
 }

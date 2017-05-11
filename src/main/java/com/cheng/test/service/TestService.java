@@ -4,7 +4,10 @@ import java.util.List;
 
 import com.cheng.test.domain.Test;
 
-public interface TestService {
+import retrofit.http.POST;
 
+public interface TestService {
+	
+	@POST("/v1/test")
 	public List<Test> getUsers();
 }

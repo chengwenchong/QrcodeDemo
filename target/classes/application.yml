@@ -6,6 +6,8 @@ server:
     port: 5005
     context-path: /qrcode
     
+base-url: http://127.0.0.1:5006   
+
 spring:
     thymeleaf:
         cache: false
@@ -31,7 +33,3 @@ logging:
 connection-timeout: 10
 read-timeout: 300
 write-timeout: 10
-
-#layout
-layout: content
-full-layout: full-layout

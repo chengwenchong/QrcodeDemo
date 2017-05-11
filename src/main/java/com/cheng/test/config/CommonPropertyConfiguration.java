@@ -12,11 +12,12 @@ public class CommonPropertyConfiguration {
 	private int readTimeout;
 	private int writeTimeout;
 	
+	private String baseUrl;
+	
 	/**
 	 * html layout
 	 */
 	private String layout;
-	private String fullLayout;
 	
 	public int getConnectionTimeout() {
 		return connectionTimeout;
@@ -42,10 +43,11 @@ public class CommonPropertyConfiguration {
 	public void setLayout(String layout) {
 		this.layout = layout;
 	}
-	public String getFullLayout() {
-		return fullLayout;
+	public String getBaseUrl() {
+		return baseUrl;
 	}
-	public void setFullLayout(String fullLayout) {
-		this.fullLayout = fullLayout;
+	public void setBaseUrl(String baseUrl) {
+		this.baseUrl = baseUrl;
 	}
+	
 }
